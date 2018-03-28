@@ -2,13 +2,13 @@
 
 Quick start template for projects wishing to use the Cubano framework.
 
-If you are working behind a proxy, the ensure you work through the next section 'Dealing with Proxies'.   
+If you are working behind a proxy, ensure you work through the next section 'Dealing with Proxies'.   
 
 ## Dealing with Proxies
 * Gradle >  For an initial example, see gradle.properies, in the root directory, and update the 'systemProp.*' 
   parameters as required. For additional configuration options see 'https://docs.gradle.org/current/userguide/build_environment.html#sec:accessing_the_web_via_a_proxy'
 * Service and Browser Testing > For an initial example, see config.properies, in the root directory, and update 
-  the 'proxy.*' parameters as required. Further see 'org.concordion.cubano.config.ProxyConfig'
+  the 'proxy.*' parameters as required. For additional configuration options see 'org.concordion.cubano.config.ProxyConfig'
 
 ## This is a gradle project - Useful Gradle Commands
 

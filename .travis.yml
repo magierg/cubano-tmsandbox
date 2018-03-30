@@ -8,7 +8,7 @@ addons:
   chrome: stable
 before_install:
   - sudo apt-get update
-  - sudo apt-get install chromium-chromedriver
+  - sudo apt-get install firefox: "59.0"
 before_script:
   - export PATH=$PATH:/usr/lib/chromium-browser/
   - export DISPLAY=:99.0

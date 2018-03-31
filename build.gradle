@@ -99,5 +99,10 @@ test {
     outputs.upToDateWhen { false } // ensure the tests run each time, even if no changes to test code
     testLogging.showStandardStreams = true
 	testLogging.showExceptions = true
+	
+	testLogging {
+        events "failed"
+        exceptionFormat "full"
+    }
 
 }

@@ -32,9 +32,9 @@ repositories {
 	
 	// Use jitpack when wanting a version of Cubano from a branch (i.e. not a specific release)
 	// See 'https://jitpack.io/#concordion/cubano'
-	//maven { 
-	//	url "https://jitpack.io" 
-	//}       
+	maven { 
+		url "https://jitpack.io" 
+	}       
 }
 
 
@@ -44,7 +44,9 @@ configurations {
 
 dependencies {
     
-    testCompile 'org.concordion:cubano-concordion:0.1.5'
+    //testCompile 'org.concordion:cubano-concordion:0.1.5'
+    
+    testCompile 'com.github.concordion:cubano:KillDriver-SNAPSHOT'
     
     testCompile 'org.hamcrest:hamcrest-junit:2.0.0.0'
     
@@ -100,6 +102,7 @@ test {
     testLogging.showStandardStreams = true
 	testLogging.showExceptions = true
 	
+	// Added to assist with logging in travis.
 	testLogging {
         events "failed"
         exceptionFormat "full"

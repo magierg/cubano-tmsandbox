@@ -27,14 +27,7 @@ sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 repositories {
-
 	mavenCentral()   
-	
-	// Use jitpack when wanting a version of Cubano from a branch (i.e. not a specific release)
-	// See 'https://jitpack.io/#concordion/cubano'
-	maven { 
-		url "https://jitpack.io" 
-	}       
 }
 
 
@@ -43,18 +36,13 @@ configurations {
 }
 
 dependencies {
-    
-    //testCompile 'org.concordion:cubano-concordion:0.1.5'
-    
-    testCompile 'com.github.concordion:cubano:KillDriver-SNAPSHOT'
+    testCompile 'org.concordion:cubano-concordion:0.2.0'
     
     testCompile 'org.hamcrest:hamcrest-junit:2.0.0.0'
     
     testCompile 'org.codejargon:fluentjdbc:1.3.1'
     
     testCompile group: 'mysql', name: 'mysql-connector-java', version: '5.1.6'
-    
-    
 }
 
 

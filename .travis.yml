@@ -23,7 +23,7 @@ deploy:
 #  keep-history: true
   local-dir: build/reports/spec
   on:
-    branch: master
+    branch: travis-publish
 
 #after_success:
 #  - ".utility/push-output-to-ghpages.sh"

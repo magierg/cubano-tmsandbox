@@ -1,9 +1,6 @@
 language: java
 jdk:
   - oraclejdk8
-#env:
-#  global:
-#    - secure: Aks/9RTuubSZSP5N3Do7uldJk5tpYLcq4atTzhClhV3LkphFzeOhE5WnL1CrwVhSx8wk8LQi6VQcmSt0ayjH1Vi7oABmfWv7YfI6wUaHBmCnb/vTE/ixoxVi5Px3QlOOaKj/xdmgHq/TV97PmGQ4bFU95uBpA+6sQfvf7qw3wLE=
 addons:
   chrome: stable
   firefox: "59.0.1"
@@ -23,7 +20,4 @@ deploy:
 #  keep-history: true
   local-dir: build/reports/spec
   on:
-    branch: travis-publish
-
-#after_success:
-#  - ".utility/push-output-to-ghpages.sh"
+    branch: master

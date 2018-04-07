@@ -43,29 +43,12 @@ If working from behind a proxy, then you will need to manage some proxy configur
 		* authentication: required
 		* proxy bypass: [hostsToBypass]
   
-## Example project set up
-* Install Git (or use via Eclipse)
-* Install Eclipse
-* Create Directories:
-	* D:\Java
-	* D:\Java\workspace\workspace_CubanoTemplate
-	* D:\Java\gradle_user_home
-	* D:\Java\source_code
-	
-* Set Environment Variable:
-	* Set a Gradle Home variable. Open a command prompt and type > 'SETX GRADLE_USER_HOME D:\Java\gradle_user_home'
-
-* Install Firefox.  The default browser used in this template project is Firefox
-
-* Open a command prompt to > D:\Java\source_code
-	* type 'git clone [https://github.com/concordion/cubano-template.git]
-
-* Open Eclipse and Import Project as an 'Existing Gradle Project'
-
-## This template is a Gradle project - Useful Gradle Commands
-On the command line:
-* To execute tests >  gradlew clean test -Dtest.single=org/concordion/cubano/template/specification/Specification
-* To execute a Checkstyle/Findbugs build > gradlew check -x test
+## Set up and run this project
+* Ensure you have a [Git client](https://git-scm.com/downloads) and [Gradle](https://gradle.org/) installed (or use via your IDE or other tools)
+* Install [Firefox](https://www.mozilla.org/en-US/firefox/new/).  The default browser used in this template project is Firefox.
+* `cd` to a relevant folder
+* `git clone [https://github.com/concordion/cubano-template.git]` or download and unzip this project
+* To execute tests, run `gradlew clean test`
 
 ## Contributing (or Setting Up your Own Project to use CheckStyle/Findbugs)
 
@@ -98,3 +81,4 @@ For eclipse:
     Checkstyle active for this project: Checked
     Use the following check configuration for all files: Cubano - (Global)
 
+1. To execute a Checkstyle/Findbugs build > `gradlew check -x test`

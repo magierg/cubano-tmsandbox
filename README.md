@@ -27,7 +27,13 @@ Finally, the living documentation includes log messages that are useful for deve
 > <img src="https://github.com/concordion/cubano/raw/master/docs/img/log.png" alt="image of documentation" width="70%">
 
 > <img src="https://github.com/concordion/cubano/raw/master/docs/img/log-image.png" alt="image of documentation" width="70%">
-
+  
+## Set up and run this project
+* Ensure you have a [Git client](https://git-scm.com/downloads) and [Gradle](https://gradle.org/) installed (or use via your IDE or other tools)
+* Install [Firefox](https://www.mozilla.org/en-US/firefox/new/).  The default browser used in this template project is Firefox.
+* `cd` to a relevant folder
+* `git clone [https://github.com/concordion/cubano-template.git]` or download and unzip this project
+* To execute tests, run `gradlew clean test`
 
 ## Dealing with Proxies
 If working from behind a proxy, then you will need to manage some proxy configuration as specified below, for Gradle, Service and Browser Testing, and Eclipse.
@@ -42,10 +48,3 @@ If working from behind a proxy, then you will need to manage some proxy configur
 		* port: [proxyPort]
 		* authentication: required
 		* proxy bypass: [hostsToBypass]
-  
-## Set up and run this project
-* Ensure you have a [Git client](https://git-scm.com/downloads) and [Gradle](https://gradle.org/) installed (or use via your IDE or other tools)
-* Install [Firefox](https://www.mozilla.org/en-US/firefox/new/).  The default browser used in this template project is Firefox.
-* `cd` to a relevant folder
-* `git clone [https://github.com/concordion/cubano-template.git]` or download and unzip this project
-* To execute tests, run `gradlew clean test`

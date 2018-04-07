@@ -1,8 +1,33 @@
 # cubano-template
 
-Quick start template for projects wishing to use the Cubano framework.
+Quick start template for projects wishing to use the Cubano framework. This generates living documentation for basic web and API services.
 
-If you are working behind a proxy, ensure you work through the next section 'Dealing with Proxies'.   
+## Features
+
+A goal of Cubano is to generate living documentation that is applicable to a wide audience.
+
+With the specifications written in plain language, and styled using Concordion, the generated [living documentation](https://concordion.github.io/cubano-template/example/Example.html) is readable by anyone:
+
+> <img src="https://github.com/concordion/cubano/raw/master/docs/img/spec.png" alt="image of documentation" width="40%">
+
+The storyboard feature allows users to easily see the steps that are performed to implement the specification, and has proven useful for product owners, analysts and training staff:
+
+> <img src="https://github.com/concordion/cubano/raw/master/docs/img/storyboard-link.png" alt="image of documentation" width="30%">
+
+> <img src="https://github.com/concordion/cubano/raw/master/docs/img/storyboard-expanded.png" alt="image of documentation" width="60%">
+
+It is also useful for showing the contents of API messages:
+
+> <img src="https://github.com/concordion/cubano/raw/master/docs/img/api.png" alt="image of documentation" width="60%">
+
+Finally, the living documentation includes log messages that are useful for developers and test developers:
+
+> <img src="https://github.com/concordion/cubano/raw/master/docs/img/log-links.png" alt="image of documentation" width="20%">
+
+> <img src="https://github.com/concordion/cubano/raw/master/docs/img/log.png" alt="image of documentation" width="70%">
+
+> <img src="https://github.com/concordion/cubano/raw/master/docs/img/log-image.png" alt="image of documentation" width="70%">
+
 
 ## Dealing with Proxies
 If working from behind a proxy, then you will need to manage some proxy configuration as specified below, for Gradle, Service and Browser Testing, and Eclipse.

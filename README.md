@@ -32,19 +32,23 @@ Finally, the living documentation includes log messages that are useful for deve
 * Ensure you have a [Git client](https://git-scm.com/downloads) and [Gradle](https://gradle.org/) installed (or use via your IDE or other tools)
 * Install [Firefox](https://www.mozilla.org/en-US/firefox/new/).  The default browser used in this template project is Firefox.
 * `cd` to a relevant folder
-* `git clone [https://github.com/concordion/cubano-template.git]` or download and unzip this project
+* `git clone https://github.com/concordion/cubano-template.git` or download and unzip this project
 * To execute tests, run `gradlew clean test`
 
 ## Dealing with Proxies
 If working from behind a proxy, then you will need to manage some proxy configuration as specified below, for Gradle, Service and Browser Testing, and Eclipse.
 
-* Gradle >  For an initial example, see gradle.properies, in the root directory, and update the 'systemProp.*' 
-  parameters as required. For additional configuration options see 'https://docs.gradle.org/current/userguide/build_environment.html#sec:accessing_the_web_via_a_proxy'
-* Service and Browser Testing > For an initial example, see config.properies, in the root directory, and update 
-  the 'proxy.*' parameters as required. You must set 'proxy.required = true' to use any format of proxy configuration. For additional configuration options see 'org.concordion.cubano.config.ProxyConfig'
-* Eclipse > Window > Preferences > General > Network Connections
-	* Add Manual for Http and Https: 
-		* host: [proxyHost]
-		* port: [proxyPort]
-		* authentication: required
-		* proxy bypass: [hostsToBypass]
+### Gradle
+For an initial example, see `gradle.properies`, in the root directory, and update the `systemProp.*` parameters as required. For additional configuration options see [accessing the web via a proxy](https://docs.gradle.org/current/userguide/build_environment.html#sec:accessing_the_web_via_a_proxy).
+
+### Service and Browser Testing
+For an initial example, see `config.properies`, in the root directory, and update the `proxy.*` parameters as required. You must set `proxy.required = true` to use any format of proxy configuration. For additional configuration options see `org.concordion.cubano.config.ProxyConfig`
+
+### With Eclipse
+`Eclipse > Window > Preferences > General > Network Connections`
+
+* Add Manual for Http and Https: 
+  * host: [proxyHost]
+  * port: [proxyPort]
+  * authentication: required
+  * proxy bypass: [hostsToBypass]

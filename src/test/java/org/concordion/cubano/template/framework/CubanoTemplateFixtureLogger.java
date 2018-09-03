@@ -1,10 +1,10 @@
-package example;
+package org.concordion.cubano.template.framework;
 
 import org.concordion.cubano.framework.ConcordionBase;
 import org.concordion.cubano.framework.fixture.FixtureLogger;
 import org.slf4j.Logger;
 
-public class CubanoDemoFixtureLogger extends FixtureLogger {
+public class CubanoTemplateFixtureLogger extends FixtureLogger {
     @Override
     public final void beforeSpecification(Class<? extends ConcordionBase> aClass, Logger logger) {
         logger.info("Initialising the acceptance test class {} on thread {}", getRelativeTestClassName(aClass), Thread.currentThread().getName());
@@ -22,6 +22,6 @@ public class CubanoDemoFixtureLogger extends FixtureLogger {
 
     private String getRelativeTestClassName(Class<? extends ConcordionBase> aClass) {
         // This is the name that can be given to the RunSingleTest job in Jenkins
-        return aClass.getName().replace(CubanoDemoBrowserFixture.class.getPackage().getName() + ".", "");
+        return aClass.getName().replace(CubanoTemplateBrowserFixture.class.getPackage().getName() + ".", "");
     }
 }

@@ -1,8 +1,9 @@
-package example;
+package org.concordion.cubano.template.framework;
 
 import org.concordion.api.ConcordionResources;
 import org.concordion.api.FailFast;
 import org.concordion.cubano.framework.ConcordionFixture;
+import org.concordion.cubano.template.AppConfig;
 import org.concordion.cubano.template.driver.httpeasy.HttpEasyConfigurator;
 import org.concordion.slf4j.ext.ReportLogger;
 import org.concordion.slf4j.ext.ReportLoggerFactory;
@@ -10,20 +11,22 @@ import org.concordion.slf4j.ext.ReportLoggerFactory;
 /**
  * A base class for extension by fixtures that contain assertions.
  *
- * @see CubanoDemoIndex for fixtures that don't contain assertions
- * @see CubanoDemoBrowserFixture for fixtures that invoke a browser
+ * @see CubanoTemplateIndex for fixtures that don't contain assertions
+ * @see CubanoTemplateBrowserFixture for fixtures that invoke a browser
  */
 @ConcordionResources("/customConcordion.css")
 @FailFast
-public abstract class CubanoDemoFixture extends ConcordionFixture {
+public abstract class CubanoTemplateFixture extends ConcordionFixture {
     protected final ReportLogger reportLogger = ReportLoggerFactory.getReportLogger(this.getClass().getName());
 
     static {
-        HttpEasyConfigurator.applyTrustingConfig();
+        AppConfig.getInstance().logSettings();
+
+        HttpEasyConfigurator.applyDefaultSettings();
     }
 
     /** Override the default logger. **/
-    public CubanoDemoFixture() {
-        super.withFixtureListener(new CubanoDemoFixtureLogger());
+    public CubanoTemplateFixture() {
+        super.withFixtureListener(new CubanoTemplateFixtureLogger());
     }
 }

@@ -3,10 +3,9 @@ package example.service;
 import java.io.IOException;
 
 import org.concordion.cubano.template.driver.services.ExampleRestApi;
+import org.concordion.cubano.template.framework.CubanoTemplateFixture;
 
-import example.CubanoDemoFixture;
-
-public class RestRequestFixture extends CubanoDemoFixture {
+public class RestRequestFixture extends CubanoTemplateFixture {
 
     public boolean callService() throws IOException {
         return new ExampleRestApi()

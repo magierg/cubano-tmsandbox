@@ -1,7 +1,7 @@
 package example.google;
 
-import example.CubanoDemoIndex;
+import org.concordion.cubano.template.framework.CubanoTemplateIndex;
 
-public class Google extends CubanoDemoIndex {
+public class Google extends CubanoTemplateIndex {
 
 }

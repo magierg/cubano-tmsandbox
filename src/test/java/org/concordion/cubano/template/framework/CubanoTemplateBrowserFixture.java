@@ -1,4 +1,4 @@
-package example;
+package org.concordion.cubano.template.framework;
 
 import java.io.Closeable;
 
@@ -18,24 +18,24 @@ import org.concordion.slf4j.ext.ReportLoggerFactory;
  *
  * Customises the test specification and provides some helper methods so the tests can access the storyboard, browser, etc.
  *
- * @see CubanoDemoIndex for fixtures that don't contain assertions
- * @see CubanoDemoFixture for fixtures that don't invoke a browser
+ * @see CubanoTemplateIndex for fixtures that don't contain assertions
+ * @see CubanoTemplateFixture for fixtures that don't invoke a browser
  */
 @ConcordionResources("/customConcordion.css")
 @FailFast
-public abstract class CubanoDemoBrowserFixture extends ConcordionBrowserFixture {
+public abstract class CubanoTemplateBrowserFixture extends ConcordionBrowserFixture {
     protected final ReportLogger reportLogger = ReportLoggerFactory.getReportLogger(this.getClass().getName());
 
     @Extension
     private final ExceptionHtmlCaptureExtension htmlCapture = new ExceptionHtmlCaptureExtension(getStoryboard(), getBrowser());
 
     static {
-        HttpEasyConfigurator.applyTrustingConfig();
+        HttpEasyConfigurator.applyDefaultSettings();
     }
 
     /** Override the default fixture logger. **/
-    public CubanoDemoBrowserFixture() {
-        super.withFixtureListener(new CubanoDemoFixtureLogger());
+    public CubanoTemplateBrowserFixture() {
+        super.withFixtureListener(new CubanoTemplateFixtureLogger());
     }
 
     @Override

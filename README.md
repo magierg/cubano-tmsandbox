@@ -15,3 +15,9 @@ To pull down the project:
 
 This project includes specifications for 2 features that are implemented as a web interface and an API respectively.
 
+## Feedback
+We love to receive feedback.
+
+Please report any [issues](https://github.com/concordion/cubano-feedback/issues) to this Github project.
+
+Please post other feedback, questions and discussion to the [Concordion Google Group](https://groups.google.com/forum/#!search/concordion) with "[Cubano]" in the message header.

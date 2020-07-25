@@ -1,17 +1,16 @@
-# Cubano Template Project
+# Trademe Sandbox Test Project
 
-This is a quick start Cubano template for projects wanting to use the [Cubano framework](https://github.com/concordion/cubano).
+I have used [Cubano framework](https://github.com/concordion/cubano) when writing the tests as it provides many cool features out of the box plus wanted to try it.
 
-Further information regarding 
-* usage
-* documentation
-* working examples 
-* set up instructions 
+You should be able to run the tests either from IDE or command line using gradle wrapper:
 
-can be found on the [Cubano Demo Project](https://github.com/concordion/cubano-demo#cubano-demo-project).
+```
+./gradlew clean test
+```
+After the run you should be able to access the test report in
 
-To pull down the project:
-`git clone https://github.com/concordion/cubano-template.git` or download and unzip this project
+```
+/cubano-tmsandbox/build/reports/spec/trademe/TradeMeTests.html
+```
 
-This project includes specifications for 2 features that are implemented as a web interface and an API respectively.
-
+I haven't removed TM Oauth values from the code (obviously not a good practice) to makes it easier to run. 

@@ -5,17 +5,19 @@ import org.concordion.cubano.tmsandbox.framework.CubanoTemplateFixture;
 
 public class UsedCarTests extends CubanoTemplateFixture {
 
-    public Boolean atLeastOneListingExists() {
+    public Boolean isAtLeastOneListingDisplayed() {
         return UsedCarsResults.open(this)
                 .atLeastOneCar();
     }
 
-    public Boolean makeExists() {
+    public Boolean isMakeDisplayed(String make) {
         return UsedCarsResults.open(this)
-                .hasKiaMake();
+                .hasGivenMake(make);
     }
 
-    public Boolean allAttributesHaveValue() {
-         return UsedCarsResults.open(this).selectCar().allMotorAttributeshaveValue();
+    public Boolean doAllAttributesHaveValue() {
+        return UsedCarsResults
+                .open(this).selectCar()
+                .doAllMotorAttributesHaveValue();
     }
 }

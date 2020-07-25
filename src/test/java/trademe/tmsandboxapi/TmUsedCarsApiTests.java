@@ -11,34 +11,35 @@ import org.concordion.cubano.tmsandbox.framework.CubanoTemplateFixture;
 
 public class TmUsedCarsApiTests extends CubanoTemplateFixture {
 
-    public boolean getCount() throws IOException {
+    public boolean isCountGreaterThenZero() throws IOException {
         return new TMSandBoxRestApi()
                 .getTmSandboxUrlResponse("https://api.tmsandbox.co.nz/v1/Search/Motors/Used.json").jsonPath("TotalCount").getAsInt() > 0;
     }
 
-    public boolean checkMake(String makeName) throws IOException {
+    public boolean doesGivenMakeExistInTheResponse(String makeName) throws IOException {
         return checkIfMakeExists(new TMSandBoxRestApi()
-                .getTmSandboxUrlResponse("https://api.tmsandbox.co.nz/v1/Categories/UsedCars.json"),makeName);
+                .getTmSandboxUrlResponse("https://api.tmsandbox.co.nz/v1/Categories/UsedCars.json"), makeName);
     }
 
-    public boolean checkDetails(String details) throws IOException {
-        String[] attributes = details.split(", ");
+    public boolean areGivenAttributesAvailableInTheResponse(String details) throws IOException {
+        String[] attributes = details.replaceAll("\\s", "").split(",");
         JsonArray cars = new TMSandBoxRestApi()
                 .getTmSandboxUrlResponse("https://api.tmsandbox.co.nz/v1/Search/Motors/Used.json").jsonPath("List").getAsJsonArray();
         JsonObject firstCarObj = (JsonObject) cars.get(0);
-            for (String s: attributes) {
-                if (firstCarObj.get(s).toString().isEmpty()){
-                    return false;
-                };
+        for (String s : attributes) {
+            if (firstCarObj.get(s).toString().isEmpty()) {
+                return false;
             }
+            ;
+        }
         return true;
     }
 
-    private Boolean checkIfMakeExists(JsonReader json, String makeName){
+    private Boolean checkIfMakeExists(JsonReader json, String makeName) {
         JsonArray makes = json.jsonPath("Subcategories").getAsJsonArray();
-        for(JsonElement make : makes){
+        for (JsonElement make : makes) {
             String s = make.getAsJsonObject().get("Name").toString();
-            if (make.getAsJsonObject().get("Name").toString().equals("\""+ makeName+ "\"")){
+            if (make.getAsJsonObject().get("Name").toString().equals("\"" + makeName + "\"")) {
                 return true;
             }
         }

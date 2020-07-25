@@ -7,18 +7,18 @@ So that I can complete the automation challenge
 ## Acceptance Criteria
 * Can call service endpoint and retrieve given details
 
-## [Check listings](-)
+## [Check if listing exist](-)
 Given Trademe sandbox API url for used cars 
 When I call that endpoint
-Then I get a [a least one listing](- "c:assertTrue=getCount()")
+Then I get a [a least one listing](- "c:assertTrue=isCountGreaterThenZero()")
 
-## [Check make](-)
+## [Check if given make exist](-)
 Given Trademe sandbox API url for car makes 
 When I call that endpoint
-Then I can see [Kia](- "#make") [in the results](- "c:assertTrue=checkMake(#make)")
+Then I can see [Kia](- "#make") [in the results](- "c:assertTrue=doesGivenMakeExistInTheResponse(#make)")
 
-## [Check details](-)
+## [Check if given attributes being returned](-)
 Given Trademe sandbox API url for used cars 
 When I call that endpoint
-Then I can see following attributes: [NumberPlate, Odometer, BodyStyle, Seats, Fuel, EngineSize, Transmission, Owners, RegistrationExpires, WofExpires, ModelDetail](- "#attributes") [for an existing car](- "c:assertTrue=checkDetails(#attributes)")
+Then I can see following attributes: [NumberPlate, Odometer, BodyStyle, Seats, Fuel, EngineSize, Transmission, Owners, RegistrationExpires, WofExpires, ModelDetail](- "#attributes") [for an existing car](- "c:assertTrue=areGivenAttributesAvailableInTheResponse(#attributes)")
 

@@ -22,9 +22,6 @@ public class UsedCarsResults extends PageObject<UsedCarsResults> {
     @FindBy(className = "tmm-search-card-list-view")
     List<WebElement> cards;
 
-    @FindBy(xpath = "//a[contains(text(),'Kia')]")
-    WebElement kiaMake;
-
     @FindBy(className = "tmm-search-card-list-view")
     List<WebElement> listings;
 
@@ -50,7 +47,7 @@ public class UsedCarsResults extends PageObject<UsedCarsResults> {
         return new UsedCarsResults(test);
     }
 
-    public Boolean atLeastOneCar() {
+    public Boolean isAtLeastOneCarDisplayed() {
         return cards.size() > 0;
     }
 
@@ -63,8 +60,8 @@ public class UsedCarsResults extends PageObject<UsedCarsResults> {
         return false;
     }
 
-    public UsedCarsResults selectCar() {
-        listings.get(0).click();
+    public UsedCarsResults selectCar(Integer index) {
+        listings.get(index).click();
         return this;
     }
 

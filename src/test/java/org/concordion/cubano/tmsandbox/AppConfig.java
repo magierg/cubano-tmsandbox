@@ -45,8 +45,7 @@ public class AppConfig {
 
     private void loadProperties() {
         baseUrl = propertyLoader.getProperty("baseUrl");
-        //searchUrl = propertyLoader.getProperty("searchUrl");
-        searchUrl = "https://www.tmsandbox.co.nz/motors/used-cars";
+        searchUrl = propertyLoader.getProperty("searchUrl");
         defaultTimeout = propertyLoader.getPropertyAsInteger("webdriver.defaultTimeout", "10");
     }
 

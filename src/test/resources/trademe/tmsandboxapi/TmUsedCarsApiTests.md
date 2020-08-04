@@ -20,5 +20,5 @@ Then I can see [Kia](- "#make") [in the results](- "c:assertTrue=doesGivenMakeEx
 ## [Check if given attributes being returned](-)
 Given Trademe sandbox API url for used cars 
 When I call that endpoint
-Then I can see following attributes: [NumberPlate, Odometer, BodyStyle, Seats, Fuel, EngineSize, Transmission, Owners, RegistrationExpires, WofExpires, ModelDetail](- "#attributes") [for an existing car](- "c:assertTrue=areGivenAttributesAvailableInTheResponse(#attributes)")
+Then I can see following attributes: [NumberPlate, Odometer, BodyStyle, Seats, Fuel, EngineSize, Transmission, Owners, RegistrationExpires, WofExpires, Model](- "#attributes") [for an existing car](- "c:assertTrue=areGivenAttributesAvailableInTheResponse(#attributes)")
 
